@@ -41,7 +41,7 @@
                     case 2:
                         if(hand == null)
                         {
-                            Console.WriteLine("\nERROR: Hand not yet created.");
+                            Console.WriteLine("\nERROR: Hand not yet created");
                             break;
                         }
                             
@@ -52,8 +52,6 @@
                     break;
                 }
             }
-
-            Console.ReadLine();
         }
 
 

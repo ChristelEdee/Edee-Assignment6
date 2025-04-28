@@ -5,7 +5,6 @@
         static void Main(string[] args)
         {
             bool mainLoop = true; //The main loop
-            Hand hand = null; //Hand object
 
             Console.WriteLine("************************************");
             Console.WriteLine("Welcome to Programming 2 - Assignment 6 - Winter 2025\n");
@@ -16,13 +15,6 @@
             {
                 Console.WriteLine("\n");
 
-                //Displaying hand after every iteration of the main loop (Will display message if hand hasn't been created)
-                if (hand == null)
-                    Console.WriteLine("No hand to display.\n");
-                else
-                    Console.WriteLine($"{hand}\n");
-
-                //MAIN MENU
                 Console.WriteLine("Please choose below:\n");
                 Console.WriteLine("1- Create Hand");
                 Console.WriteLine("2- Sort Hand");
@@ -39,12 +31,7 @@
                     break;
 
                     case 2:
-                        if(hand == null)
-                        {
-                            Console.WriteLine("\nERROR: Hand not yet created.");
-                            break;
-                        }
-                            
+
                     break;
 
                     case 3:
@@ -52,8 +39,6 @@
                     break;
                 }
             }
-
-            Console.ReadLine();
         }
 
 
