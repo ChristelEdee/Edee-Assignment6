@@ -56,13 +56,15 @@
                     break;
 
                     case 2:
-                        if (hand == null)
+                        if(hand == null)
                         {
                             Console.WriteLine("\nERROR: Hand not yet created.");
                             break;
                         }
                         else
-                            SortHand(ref hand);
+                        {
+
+                        }
                     break;
 
                     case 3:
@@ -81,26 +83,7 @@
             Console.Write("How many cards would you like in the hand? (3-12): ");
             byte cardsInHand = CardsInHandValidation();
 
-            //Creating the hand using the constructor
             hand = new Hand(cardsInHand);
-        }
-
-        static void SortHand(ref Hand hand)
-        {
-            bool isIncreasedOrder;
-
-            //Asking user for the sorting order
-            Console.Write("Do you want to sort the hand in an INCREASING order or a DECREASING order?: ");
-            string order = OrderValidation();
-
-            //Changing the boolean based on what they answered
-            if (order.ToLower() == "increasing")
-                isIncreasedOrder = true;
-            else
-                isIncreasedOrder = false;
-
-           //Sorting the hand accordingly using the Hand's Sort method
-           hand.Sort(isIncreasedOrder);
         }
 
         //Validation methods:
@@ -136,21 +119,6 @@
             {
                 Console.Write($"What you entered wasn't valid. Try again: ");
                 successfulConversion = byte.TryParse(Console.ReadLine(), out userInput);
-            }
-
-            return userInput;
-        }
-        static string OrderValidation()
-        {
-            string[] validAnswers = { "Increasing", "increasing", "Decreasing", "decreasing" };
-
-            string userInput = Console.ReadLine(); //Reading from console
-
-            //Outputting error message everytime an invalid answer is inputted:
-            while (!validAnswers.Contains(userInput)) 
-            {
-                Console.Write("What you entered wasn't valid. Try again: ");
-                userInput = Console.ReadLine();
             }
 
             return userInput;

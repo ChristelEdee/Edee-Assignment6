@@ -36,7 +36,7 @@ namespace Edee_Assignment6
         //Method:
         public void Sort(bool increasingOrder)
         {
-            if(increasingOrder == true) //If user wants an increasing order
+            if(increasingOrder == true)
             {
                 int minIndex; 
 
@@ -61,8 +61,8 @@ namespace Edee_Assignment6
                         cards[minIndex] = temp;
                     }
                 }
-            }
-            else //If user wants a decreasing order
+            } //If user wants an increasing order
+            else
             {
                 int minIndex;
 
@@ -87,7 +87,7 @@ namespace Edee_Assignment6
                         cards[minIndex] = temp;
                     }
                 }
-            } 
+            } //If user wants in decreasing order
         }
 
         //Override Methods

@@ -87,20 +87,11 @@
 
         static void SortHand(ref Hand hand)
         {
-            bool isIncreasedOrder;
+            bool isIncreaseOrder;
 
             //Asking user for the sorting order
             Console.Write("Do you want to sort the hand in an INCREASING order or a DECREASING order?: ");
             string order = OrderValidation();
-
-            //Changing the boolean based on what they answered
-            if (order.ToLower() == "increasing")
-                isIncreasedOrder = true;
-            else
-                isIncreasedOrder = false;
-
-           //Sorting the hand accordingly using the Hand's Sort method
-           hand.Sort(isIncreasedOrder);
         }
 
         //Validation methods:
@@ -140,6 +131,7 @@
 
             return userInput;
         }
+
         static string OrderValidation()
         {
             string[] validAnswers = { "Increasing", "increasing", "Decreasing", "decreasing" };

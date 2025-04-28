@@ -87,20 +87,7 @@
 
         static void SortHand(ref Hand hand)
         {
-            bool isIncreasedOrder;
 
-            //Asking user for the sorting order
-            Console.Write("Do you want to sort the hand in an INCREASING order or a DECREASING order?: ");
-            string order = OrderValidation();
-
-            //Changing the boolean based on what they answered
-            if (order.ToLower() == "increasing")
-                isIncreasedOrder = true;
-            else
-                isIncreasedOrder = false;
-
-           //Sorting the hand accordingly using the Hand's Sort method
-           hand.Sort(isIncreasedOrder);
         }
 
         //Validation methods:
@@ -136,21 +123,6 @@
             {
                 Console.Write($"What you entered wasn't valid. Try again: ");
                 successfulConversion = byte.TryParse(Console.ReadLine(), out userInput);
-            }
-
-            return userInput;
-        }
-        static string OrderValidation()
-        {
-            string[] validAnswers = { "Increasing", "increasing", "Decreasing", "decreasing" };
-
-            string userInput = Console.ReadLine(); //Reading from console
-
-            //Outputting error message everytime an invalid answer is inputted:
-            while (!validAnswers.Contains(userInput)) 
-            {
-                Console.Write("What you entered wasn't valid. Try again: ");
-                userInput = Console.ReadLine();
             }
 
             return userInput;
