@@ -28,7 +28,7 @@ namespace Edee_Assignment6
             {
                 Rank rank = (Rank)random.Next(2, 15); //Choosing random rank from the Rank enum
                 Suit suit = (Suit)random.Next(0, 4); //Choosing random suit from the Suit enum
-                cards.Add(new Card(rank, suit)); //Adding the created card to the hand
+                cards[i] = new Card(rank, suit); //Adding the created card to the hand
             }
         }
 
