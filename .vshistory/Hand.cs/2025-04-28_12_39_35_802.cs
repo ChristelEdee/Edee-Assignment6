@@ -93,9 +93,8 @@ namespace Edee_Assignment6
         //Override Methods
         public override string ToString()
         {
-
             //Creating an empty string
-            string str = "";
+            string str = " ";
 
             //Adding the string representation of each card in the hand to that string
             foreach(Card card in cards)

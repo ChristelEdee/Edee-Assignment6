@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace Edee_Assignment6
+﻿namespace Edee_Assignment6
 {
     //Suit enum
     public enum Suit
@@ -34,17 +32,10 @@ namespace Edee_Assignment6
             while (mainLoop)
             {
                 Console.WriteLine("\n");
-                Console.OutputEncoding = Encoding.UTF8; //Have to put this to get the suit symbols   
 
                 //Displaying hand after every iteration of the main loop (Will display message if hand hasn't been created)
-                Console.WriteLine("CURRENT HAND:\n");
-
                 if (hand == null)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("No hand to display.\n");
-                    Console.ForegroundColor = ConsoleColor.White;
-                }
                 else
                     Console.WriteLine($"{hand}\n");
 

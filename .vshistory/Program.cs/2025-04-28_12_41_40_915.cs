@@ -40,11 +40,7 @@ namespace Edee_Assignment6
                 Console.WriteLine("CURRENT HAND:\n");
 
                 if (hand == null)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("No hand to display.\n");
-                    Console.ForegroundColor = ConsoleColor.White;
-                }
                 else
                     Console.WriteLine($"{hand}\n");
 
