@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Edee_Assignment6
 {
-  
-    internal class Card
+    internal class Hand
     {
     }
 }

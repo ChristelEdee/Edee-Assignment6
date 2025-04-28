@@ -1,22 +1,5 @@
 ﻿namespace Edee_Assignment6
 {
-    //Suit enum
-    public enum Suit
-    {
-        Hearts,
-        Diamonds,
-        Clubs,
-        Spades
-    }
-
-    //Rank enum
-    public enum Rank
-    {
-        Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten,
-        Jack, Queen, King, Ace
-    }
-
-
     internal class Program
     {
         static void Main(string[] args)
@@ -77,16 +60,28 @@
         }
 
 
-        static void CreateHand(ref Hand hand)
+        //Suit enum
+        enum Suit
         {
-            //Asking user for the number of cards in the hand
-            Console.Write("How many cards would you like in the hand? (3-12): ");
-            byte cardsInHand = CardsInHandValidation();
-
-            hand = new Hand(cardsInHand);
+           Hearts, 
+           Diamonds, 
+           Clubs, 
+           Spades
         }
 
-        //Validation methods:
+        //Rank enum
+        enum Rank
+        {
+            Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten,
+            Jack, Queen, King, Ace
+        }
+
+        static void CreateHand(ref Hand hand)
+        {
+            byte cardsPerHand = CardsPerHandValidation();
+        }
+
+        //Validation method:
         static byte MenuChoiceValidation()
         {
             const byte MAX_MENU_CHOICE = 3; //Last choice for main menu
@@ -105,17 +100,17 @@
 
             return userInput;
         }
-        static byte CardsInHandValidation()
+
+        static byte CardsPerHandValidation()
         {
-            const byte MIN_NUM = 3;
-            const byte MAX_NUM = 12;
+            const byte MIN_NUM = 1;
 
             byte userInput;
             bool successfulConversion;
 
             successfulConversion = byte.TryParse(Console.ReadLine(), out userInput);
 
-            while (successfulConversion == false || userInput < MIN_NUM || userInput > MAX_NUM)
+            while (successfulConversion == false || userInput < MIN_NUM)
             {
                 Console.Write($"What you entered wasn't valid. Try again: ");
                 successfulConversion = byte.TryParse(Console.ReadLine(), out userInput);

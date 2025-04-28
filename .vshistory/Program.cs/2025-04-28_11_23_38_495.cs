@@ -1,22 +1,5 @@
 ﻿namespace Edee_Assignment6
 {
-    //Suit enum
-    public enum Suit
-    {
-        Hearts,
-        Diamonds,
-        Clubs,
-        Spades
-    }
-
-    //Rank enum
-    public enum Rank
-    {
-        Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten,
-        Jack, Queen, King, Ace
-    }
-
-
     internal class Program
     {
         static void Main(string[] args)
@@ -77,13 +60,27 @@
         }
 
 
+        //Suit enum
+        enum Suit
+        {
+           Hearts, 
+           Diamonds, 
+           Clubs, 
+           Spades
+        }
+
+        //Rank enum
+        enum Rank
+        {
+            Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten,
+            Jack, Queen, King, Ace
+        }
+
         static void CreateHand(ref Hand hand)
         {
             //Asking user for the number of cards in the hand
             Console.Write("How many cards would you like in the hand? (3-12): ");
             byte cardsInHand = CardsInHandValidation();
-
-            hand = new Hand(cardsInHand);
         }
 
         //Validation methods:
@@ -107,8 +104,8 @@
         }
         static byte CardsInHandValidation()
         {
-            const byte MIN_NUM = 3;
-            const byte MAX_NUM = 12;
+            const byte MIN_NUM = 2;
+            const byte MAX_NUM = 7;
 
             byte userInput;
             bool successfulConversion;

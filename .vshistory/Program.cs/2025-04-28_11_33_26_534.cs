@@ -8,7 +8,6 @@
         Clubs,
         Spades
     }
-
     //Rank enum
     public enum Rank
     {
