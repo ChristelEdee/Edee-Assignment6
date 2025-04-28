@@ -77,10 +77,6 @@
 
         static void CreateHand(ref Hand hand)
         {
-            Console.Clear();
-
-            Console.WriteLine("CREATE HAND\n");
-
             //Asking user for the number of cards in the hand
             Console.Write("How many cards would you like in the hand? (3-12): ");
             byte cardsInHand = CardsInHandValidation();
@@ -106,7 +102,6 @@
            //Sorting the hand accordingly using the Hand's Sort method
            hand.Sort(isIncreasedOrder);
         }
-
 
         //Validation methods:
         static byte MenuChoiceValidation()
